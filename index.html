@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pull de promo prépa · Lycée Baggio</title>
+<meta name="description" content="Réserve ton pull de promo prépa du lycée Baggio : promo 232 ou promo 233, 40 €, tailles XS à XXL.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Pull de promo prépa · Lycée Baggio">
+<meta property="og:description" content="Promo 232 ou 233. 40 €. Réserve le tien.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23000'/><text x='16' y='23' font-size='19' text-anchor='middle' fill='%23d9b56f' font-family='serif'>∂</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..600&family=Caveat:wght@400;600&family=Manrope:wght@400;500;600&family=UnifrakturMaguntia&family=Grenze+Gotisch:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<style>
+:root{
+  --bg:#000;
+  --ink:#f2f0eb;
+  --dim:rgba(242,240,235,.62);
+  --faint:rgba(242,240,235,.12);
+  --gold:#d9b56f;  --gold-rgb:217,181,111;
+  --ice:#8fb8ff;   --ice-rgb:143,184,255;
+  --display:"Bodoni Moda", "Didot", Georgia, serif;
+  --sans:"Manrope", system-ui, sans-serif;
+  --hand:"Caveat", cursive;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg);color-scheme:dark}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+body.locked{overflow:hidden}
+::selection{background:rgba(var(--gold-rgb),.35);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:#1c1c1e;border-radius:10px;border:2px solid #000}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--gold);outline-offset:4px;border-radius:4px}
+.wrap{width:min(1280px,100% - 48px);margin-inline:auto}
+.skip{position:absolute;left:16px;top:-60px;background:var(--ink);color:#000;padding:12px 16px;z-index:300;border-radius:6px}
+.skip:focus{top:16px}
+
+/* Bords qui se fondent dans le noir */
+.vignette{position:fixed;inset:0;pointer-events:none;z-index:40;
+  background:radial-gradient(ellipse 85% 80% at 50% 50%,transparent 45%,rgba(0,0,0,.75) 85%,#000 100%)}
+.grain{position:fixed;inset:-50%;pointer-events:none;z-index:41;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- INTRO ---------- */
+#intro{position:fixed;inset:0;z-index:200;background:#000;overflow:hidden;perspective:700px;transition:opacity 1.1s var(--ease),visibility 1.1s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 30%,#000 80%)}
+.tunnel{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
+.eq{position:absolute;left:0;top:0;white-space:nowrap;color:#e8e6e1;font-size:26px;will-change:transform,opacity}
+.eq.g{color:var(--gold)} .eq.b{color:var(--ice)}
+.intro-mark{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%) scale(.7);opacity:0;pointer-events:none;
+  font:400 clamp(56px,12vw,180px)/1 var(--display);letter-spacing:-.01em;color:var(--gold);white-space:nowrap;
+  text-shadow:0 0 80px rgba(var(--gold-rgb),.45);transition:opacity .7s,transform 1.6s var(--ease)}
+.intro-mark.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.skip-intro{position:absolute;right:24px;bottom:24px;z-index:3;min-height:44px;padding:0 20px;border-radius:999px;cursor:pointer;
+  border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.6);color:var(--ink);font:500 14px var(--sans);transition:border-color .2s,transform .15s}
+.skip-intro:hover{border-color:rgba(var(--gold-rgb),.7)}
+.skip-intro:active{transform:scale(.96)}
+
+/* ---------- Croquis à main levée ---------- */
+.sk{position:absolute;pointer-events:none;color:#fff;opacity:.2;
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 40%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 40%,transparent 75%)}
+.sk *{vector-effect:non-scaling-stroke}
+.sk .ln{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s var(--ease)}
+.sk .ln2{fill:none;stroke:currentColor;stroke-width:.8;stroke-linecap:round;opacity:.55;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 3s var(--ease) .2s}
+.sk .dash{fill:none;stroke:currentColor;stroke-width:1;stroke-dasharray:4 6;opacity:0;transition:opacity 1.6s 1s}
+.sk text{font-family:var(--hand);fill:currentColor;stroke:none;font-size:22px;opacity:0;transition:opacity 1.4s 1.2s}
+.sk.drawn .ln,.sk.drawn .ln2{stroke-dashoffset:0}
+.sk.drawn .dash{opacity:1}
+.sk.drawn text{opacity:1}
+.sk.w{color:#d8d6d0;opacity:.15}
+/* Schémas animés (tige rigide, masse-ressort) */
+.sk.anim{opacity:.34;-webkit-mask-image:none;mask-image:none}
+.sk.anim.g{opacity:.42}
+.swing{transform-box:view-box;transform-origin:120px 14px;animation:swing 2.6s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-26deg)}to{transform:rotate(26deg)}}
+.spring{transform-box:view-box;transform-origin:80px 14px;animation:stretch 1.5s ease-in-out infinite alternate}
+.mass{animation:bob 1.5s ease-in-out infinite alternate}
+@keyframes stretch{from{transform:scaleY(.78)}to{transform:scaleY(1.22)}}
+@keyframes bob{from{transform:translateY(-33px)}to{transform:translateY(33px)}}
+.sk.g{color:var(--gold);opacity:.28}
+.sk.b{color:var(--ice);opacity:.26}
+
+/* ---------- HEADER ---------- */
+header.top{position:fixed;top:0;left:0;right:0;z-index:60;padding:20px 0;transition:background .4s,backdrop-filter .4s}
+header.top.scrolled{background:rgba(0,0,0,.55);backdrop-filter:blur(14px)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.02em;min-height:44px}
+.brand svg{width:30px;height:30px}
+.top-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:500;font-size:14px;
+  border:1px solid rgba(255,255,255,.2);transition:border-color .25s,background .25s,transform .15s}
+.top-cta:hover{border-color:rgba(var(--gold-rgb),.8);background:rgba(var(--gold-rgb),.08)}
+.top-cta:active{transform:scale(.97)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:-20%;width:900px;height:900px;transform:translateX(-50%);z-index:-1;
+  background:radial-gradient(circle,rgba(var(--gold-rgb),.10),transparent 62%)}
+.hero-in{position:relative;z-index:2;padding:120px 24px 80px}
+.hero h1{font:400 clamp(44px,7.6vw,118px)/.92 var(--display);letter-spacing:-.035em;text-wrap:balance}
+.hero h1 .l2{display:block;color:var(--gold);font-style:italic;font-weight:400;letter-spacing:-.04em}
+.hero .classes{margin-top:26px;display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;font-size:14px;font-weight:600;letter-spacing:.28em;color:var(--ink)}
+.hero .classes i{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.hero .sub{margin:22px auto 0;max-width:40ch;color:var(--dim);font-size:clamp(16px,1.4vw,19px)}
+.hero .meta{margin-top:34px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-size:14px;color:var(--dim);letter-spacing:.04em}
+.hero .meta b{color:var(--ink);font-weight:600}
+.cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);z-index:2;display:grid;place-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);text-decoration:none;min-height:44px}
+.cue i{display:block;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+[data-enter]>*{opacity:0;transform:translateY(22px);filter:blur(8px)}
+.ready [data-enter]>*{animation:rise 1.3s var(--ease) forwards}
+.ready [data-enter]>*:nth-child(2){animation-delay:.12s}
+.ready [data-enter]>*:nth-child(3){animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none;filter:none}}
+
+/* ---------- LES PULLS ---------- */
+.pulls-sec{position:relative;overflow:hidden}
+.pulls-sec h2{position:absolute;left:0;right:0;top:104px;z-index:5;text-align:center;font:400 clamp(30px,3.4vw,48px)/1 var(--display);letter-spacing:-.02em;pointer-events:none}
+.pulls-sec h2 span{display:block;margin-top:12px;font:400 15px var(--sans);letter-spacing:.02em;color:var(--dim)}
+.stage{display:flex;height:100vh;height:100svh;min-height:680px}
+.pull{position:relative;flex:1 1 0;min-width:0;border:0;background:transparent;color:var(--ink);cursor:pointer;font:inherit;text-align:left;
+  --mx:50%;--my:40%;overflow:hidden;isolation:isolate;transition:flex-grow 1s var(--ease)}
+.pull.p232{--a:var(--gold-rgb);--ac:var(--gold)}
+.pull.p233{--a:var(--ice-rgb);--ac:var(--ice)}
+.pull + .pull::before{content:"";position:absolute;left:0;top:15%;bottom:15%;width:1px;z-index:3;background:linear-gradient(transparent,rgba(255,255,255,.14),transparent)}
+.beam{position:absolute;left:50%;top:-8%;width:110%;height:95%;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 22% 55% at 50% 0%,rgba(var(--a),.28),transparent 100%),
+    conic-gradient(from 180deg at 50% -6%,transparent 160deg,rgba(var(--a),.10) 172deg,rgba(var(--a),.16) 180deg,rgba(var(--a),.10) 188deg,transparent 200deg);
+  filter:blur(18px);opacity:.75;transition:opacity .9s var(--ease)}
+.glow{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .6s;
+  background:radial-gradient(420px circle at var(--mx) var(--my),rgba(var(--a),.10),transparent 65%)}
+.floor{position:absolute;left:50%;bottom:13%;width:min(62%,460px);height:70px;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(var(--a),.30),transparent 68%);filter:blur(6px);transition:opacity .8s}
+.shadow{position:absolute;left:50%;bottom:15%;width:min(36%,260px);height:22px;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.95),transparent 70%);animation:shadow 6.5s ease-in-out infinite}
+.fig{position:absolute;left:50%;top:56%;width:min(94%,800px,100vh);transform:translate(-50%,-50%);transition:transform 1.1s var(--ease),opacity .8s,filter .8s}
+.fig svg{display:block;width:100%;height:auto;overflow:visible;animation:float 6.5s ease-in-out infinite;
+  filter:drop-shadow(0 40px 50px rgba(0,0,0,.9)) drop-shadow(0 -2px 24px rgba(var(--a),.18))}
+.p233 .fig svg,.p233 .shadow{animation-delay:-3.25s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-18px) rotate(.6deg)}}
+@keyframes shadow{0%,100%{transform:translateX(-50%) scale(1);opacity:.9}50%{transform:translateX(-50%) scale(.8);opacity:.6}}
+.pull-id{position:absolute;left:clamp(24px,4vw,64px);top:clamp(150px,22vh,210px);z-index:4}
+.pull-id small{display:block;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.pull-id strong{display:block;margin-top:6px;font:400 clamp(64px,7.5vw,120px)/.85 var(--display);letter-spacing:-.04em;color:var(--ac);
+  text-shadow:0 0 40px rgba(var(--a),.35)}
+.pull-foot{position:absolute;left:clamp(24px,4vw,64px);right:clamp(24px,4vw,64px);bottom:clamp(28px,5vh,56px);z-index:4;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.price{font:400 30px var(--display);letter-spacing:-.01em}
+.price small{font:400 13px var(--sans);color:var(--dim);margin-left:8px;letter-spacing:.04em}
+.cta{display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;
+  color:#0a0a0a;background:var(--ac);box-shadow:0 10px 40px -8px rgba(var(--a),.6);transition:transform .3s var(--ease),box-shadow .3s}
+.cta svg{transition:transform .35s var(--ease)}
+.pull:hover .cta,.pull:focus-visible .cta{box-shadow:0 14px 50px -6px rgba(var(--a),.85)}
+.pull:hover .cta svg,.pull:focus-visible .cta svg{transform:translateX(5px)}
+.pull:active .cta{transform:scale(.96)}
+.pull:hover .glow{opacity:1}
+@media (hover:hover) and (min-width:860px){
+  .stage:hover .pull{flex-grow:.58}
+  .stage .pull:hover{flex-grow:1.7}
+  .pull:hover .beam{opacity:1}
+  .pull:hover .fig{transform:translate(-50%,-52%) scale(1.14)}
+  .stage:hover .pull:not(:hover) .fig{transform:translate(-50%,-50%) scale(.82);opacity:.35;filter:saturate(.4)}
+  .stage:hover .pull:not(:hover) .beam{opacity:.18}
+  .stage:hover .pull:not(:hover) .floor{opacity:.25}
+  .stage:hover .pull:not(:hover) .pull-foot .price{opacity:0}
+  .pull-foot .price{transition:opacity .4s}
+}
+
+/* ---------- RÉSERVER ---------- */
+.howto{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 120px;overflow:hidden}
+.howto-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,7vw,120px);align-items:start}
+.howto h2{font:400 clamp(44px,5.6vw,84px)/.95 var(--display);letter-spacing:-.035em;text-wrap:balance}
+.howto h2 em{color:var(--gold)}
+.howto .intro-p{margin-top:24px;color:var(--dim);max-width:36ch;font-size:17px}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:26px 0;border-top:1px solid var(--faint)}
+.steps li:last-child{border-bottom:1px solid var(--faint)}
+.steps li::before{content:counter(s);font:italic 400 38px/1 var(--display);color:var(--gold)}
+.steps h3{font-size:19px;font-weight:600;letter-spacing:-.005em;margin-bottom:4px}
+.steps p{color:var(--dim)}
+.contacts{margin-top:44px;display:grid;gap:18px}
+.contact{display:flex;align-items:baseline;justify-content:space-between;gap:18px;text-decoration:none;flex-wrap:wrap;min-height:44px}
+.contact span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.contact strong{font:400 clamp(26px,3vw,42px)/1.1 var(--display);letter-spacing:-.02em;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;
+  transition:background-size .5s var(--ease),color .3s;overflow-wrap:anywhere}
+.contact:hover strong{background-size:100% 1px;color:var(--gold)}
+
+footer{position:relative;z-index:2;padding:32px 0 44px;border-top:1px solid var(--faint)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--dim)}
+
+/* ---------- MODALE ---------- */
+dialog{margin:auto;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:0;width:min(560px,100% - 32px);max-height:calc(100dvh - 32px);
+  background:#0b0b0c;color:var(--ink);box-shadow:0 50px 140px rgba(0,0,0,.9),0 0 0 1px rgba(var(--a),.08);--a:var(--gold-rgb);--ac:var(--gold);overflow:auto}
+dialog.p233{--a:var(--ice-rgb);--ac:var(--ice)}
+dialog::backdrop{background:rgba(0,0,0,.75);backdrop-filter:blur(8px)}
+dialog[open]{animation:pop .6s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97);filter:blur(6px)}}
+.dlg-head{position:relative;padding:32px 30px 22px;background:radial-gradient(ellipse 80% 120% at 50% -30%,rgba(var(--a),.22),transparent 70%)}
+.dlg-head p{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.dlg-head h2{font:400 48px/1 var(--display);letter-spacing:-.03em;margin-top:10px}
+.dlg-head h2 b{font-weight:400;color:var(--ac)}
+.x{position:absolute;right:16px;top:16px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:transparent;color:var(--ink);cursor:pointer;
+  display:grid;place-items:center;transition:border-color .2s,transform .15s}
+.x:hover{border-color:rgba(var(--a),.8)} .x:active{transform:scale(.92)}
+form.res{padding:8px 30px 30px;display:grid;gap:22px}
+fieldset{border:0}
+legend,.lbl{display:block;font-weight:600;font-size:15px;margin-bottom:10px}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.sizes input{position:absolute;opacity:0;pointer-events:none}
+.sizes label{min-width:54px;min-height:46px;display:grid;place-items:center;padding:0 12px;border:1px solid rgba(255,255,255,.18);border-radius:12px;
+  font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .15s}
+.sizes label:hover{border-color:rgba(var(--a),.7)}
+.sizes label:active{transform:scale(.95)}
+.sizes input:checked+label{background:var(--ac);border-color:var(--ac);color:#0a0a0a}
+.sizes input:focus-visible+label{outline:1.5px solid var(--ac);outline-offset:3px}
+.field input{width:100%;min-height:50px;padding:0 16px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:#121214;font:16px var(--sans);color:var(--ink);
+  caret-color:var(--ac);transition:border-color .2s}
+.field input::placeholder{color:rgba(242,240,235,.58)}
+.field input:focus{outline:none;border-color:var(--ac)}
+.field small{display:block;margin-top:6px;color:var(--dim);font-size:13px}
+.err{color:#ff8a7a;font-size:14px;margin-top:6px}
+.err:empty{display:none}
+.send{display:grid;grid-template-columns:1fr;gap:10px}
+.insta-note{margin-top:18px;color:var(--dim);font-size:15px}
+/* Étoile des classes étoilées (PSI*, PT*) */
+.star{display:inline-block;width:.9em;height:.9em;margin-left:2px;vertical-align:.32em;color:var(--gold);animation:twinkle 3.2s var(--ease) infinite}
+.star svg{display:block;width:100%;height:100%;fill:currentColor;filter:drop-shadow(0 0 6px rgba(var(--gold-rgb),.7))}
+.star.d2{animation-delay:-1.6s}
+@keyframes twinkle{0%,100%{transform:rotate(0) scale(.85);opacity:.75}12%{transform:rotate(45deg) scale(1.25);opacity:1}30%{transform:rotate(90deg) scale(.9);opacity:.85}}
+.sizes label{display:inline-flex;align-items:center;justify-content:center}
+.sizes label .star{width:.7em;height:.7em;margin:0 0 .5em 1px}
+.sizes input:checked+label .star{color:#0a0a0a}
+.sizes input:checked+label .star svg{filter:none}
+.send button{min-height:54px;border-radius:14px;font:600 15px var(--sans);cursor:pointer;transition:transform .15s,box-shadow .3s,border-color .2s}
+.send .mail{border:0;background:var(--ac);color:#0a0a0a;box-shadow:0 10px 36px -10px rgba(var(--a),.7)}
+.send .mail:hover{box-shadow:0 14px 44px -8px rgba(var(--a),.95)}
+.send .sms{border:1px solid rgba(255,255,255,.22);background:transparent;color:var(--ink)}
+.send .sms:hover{border-color:rgba(var(--a),.8)}
+.send button:active{transform:scale(.97)}
+/* Aperçu du pull dans la réservation */
+.dlg-prev{margin:0 18px;padding:6px 0 2px;border-radius:18px;background:radial-gradient(ellipse 70% 90% at 50% 10%,rgba(var(--a),.14),transparent 70%)}
+.dlg-prev svg{display:block;width:100%;height:auto}
+.dlg-prev p{display:grid;grid-template-columns:1fr 1fr;text-align:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:-6px}
+.lbl .opt{font-weight:400;color:var(--dim)}
+.direct{font-size:14px;color:var(--dim);border-top:1px solid var(--faint);padding-top:18px}
+.direct a{color:var(--ink);font-weight:600;text-underline-offset:3px}
+
+@media (max-width:859px){
+  .stage{flex-direction:column;height:auto;min-height:0}
+  .pull{min-height:100svh}
+  .pull + .pull::before{left:15%;right:15%;top:0;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent)}
+  .pulls-sec h2{top:96px}
+  .p233 .pull-id{top:56px}
+  .fig{width:min(98%,560px)}
+  .howto-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wrap{width:calc(100% - 32px)}
+  .top-cta{display:none}
+  .pull-foot{flex-direction:column;align-items:stretch}
+  .cta{justify-content:center}
+  .send{grid-template-columns:1fr}
+  .hero .meta{gap:14px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  [data-enter]>*{opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body class="locked">
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Intro : plongée dans les équations -->
+<div id="intro">
+  <div class="tunnel" id="tunnel" aria-hidden="true"></div>
+  <div class="intro-mark" id="introMark" aria-hidden="true">PRÉPA</div>
+  <button class="skip-intro" id="skipIntro" type="button">Passer l'intro</button>
+</div>
+
+<!-- Filtre « main levée » partagé par tous les croquis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="2" seed="7"/>
+    <feDisplacementMap in="SourceGraphic" scale="3.2"/>
+  </filter>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#d9b56f" stroke-width="1.2"/><text x="16" y="22.5" text-anchor="middle" font-family="Bodoni Moda, serif" font-size="18" fill="#d9b56f">∂</text></svg>
+      Lycée Baggio · Prépa
+    </a>
+    <a class="top-cta" href="#reserver">Comment réserver</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Solénoïde infini -->
+    <svg class="sk" data-sk style="left:-3%;top:44%;width:min(34vw,480px)" viewBox="0 0 540 280" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 140 L520 140"/><path class="ln" d="M508 133 L520 140 L508 147"/>
+        <g id="coil"></g>
+        <path class="ln2" d="M70 118 L460 118 M70 162 L460 162"/>
+        <path class="ln2" d="M262 112 L272 118 L262 124 M262 156 L272 162 L262 168"/>
+        <path class="ln2" d="M460 118 C540 60 540 30 470 20 C330 6 200 6 70 20 C10 30 10 80 70 118"/>
+        <path class="ln" d="M86 222 L70 250 M70 250 L40 250"/><path class="ln2" d="M52 244 L42 250 L52 256"/>
+      </g>
+      <text x="300" y="60">B = μ₀ n I</text>
+      <text x="350" y="262">solénoïde infini</text>
+      <text x="18" y="236">I</text>
+      <text x="512" y="166">z</text>
+    </svg>
+
+    <!-- Cycle de Carnot -->
+    <svg class="sk g" data-sk style="right:2%;top:40%;width:min(22vw,320px)" viewBox="0 0 360 290" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M40 260 L40 20 M32 32 L40 20 L48 32 M40 260 L340 260 M328 252 L340 260 L328 268"/>
+        <path class="ln" d="M90 60 Q140 74 200 100 Q245 140 282 192 Q210 214 150 210 Q112 140 90 60 Z"/>
+        <path class="ln2" d="M140 72 L152 78 L140 84 M248 146 L252 158 L240 152 M210 211 L198 206 L210 202"/>
+        <path class="dash" d="M90 60 L90 260 M282 192 L282 260"/>
+      </g>
+      <text x="18" y="28">P</text><text x="334" y="284">V</text>
+      <text x="150" y="160">W &lt; 0</text>
+      <text x="200" y="84">T꜀</text><text x="196" y="236">T_f</text>
+    </svg>
+
+    <!-- Onde -->
+    <svg class="sk b" data-sk style="left:30%;bottom:4%;width:min(30vw,420px)" viewBox="0 0 520 150" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 70 C45 10 70 10 95 70 S145 130 170 70 S220 10 245 70 S295 130 320 70 S370 10 395 70 S445 130 470 70 S500 30 510 40"/>
+        <path class="ln2" d="M95 118 L245 118 M95 110 L95 126 M245 110 L245 126"/>
+        <path class="dash" d="M20 70 L510 70"/>
+      </g>
+      <text x="160" y="146">λ</text>
+      <text x="300" y="140">A cos(ωt − kx)</text>
+    </svg>
+
+    <!-- Masse m suspendue à un ressort (animé) -->
+    <svg class="sk w anim" data-sk style="left:9%;top:70px;width:min(11vw,150px)" viewBox="0 0 170 330" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 12 L140 12"/>
+        <path class="ln2" d="M30 12 L20 2 M50 12 L40 2 M70 12 L60 2 M90 12 L80 2 M110 12 L100 2 M130 12 L120 2"/>
+        <g class="spring"><path class="ln" d="M80 12 L80 30 L60 38 L100 50 L60 62 L100 74 L60 86 L100 98 L60 110 L100 122 L60 134 L100 146 L80 152 L80 164"/></g>
+        <g class="mass">
+          <path class="ln" d="M55 164 L105 164 L105 204 L55 204 Z"/>
+          <path class="dash" d="M112 184 L160 184"/>
+        </g>
+        <path class="dash" d="M20 184 L48 184"/>
+      </g>
+      <g class="mass"><text x="72" y="192">m</text><text x="146" y="176">x</text></g>
+      <text x="104" y="92">k</text>
+      <text x="0" y="290">m ẍ = − k x</text>
+    </svg>
+
+    <!-- Pendule à tige rigide (animé) -->
+    <svg class="sk g anim" data-sk style="right:10%;top:70px;width:min(15vw,210px)" viewBox="0 0 240 310" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M50 12 L190 12"/>
+        <path class="ln2" d="M60 12 L50 2 M80 12 L70 2 M100 12 L90 2 M120 12 L110 2 M140 12 L130 2 M160 12 L150 2 M180 12 L170 2"/>
+        <path class="dash" d="M120 14 L120 240 M38 196 Q120 262 202 196"/>
+        <g class="swing">
+          <path class="ln" d="M116 16 L116 196 M124 16 L124 196 M116 196 L124 196"/>
+          <path class="ln" d="M120 196 a18 18 0 1 1 0 36 a18 18 0 1 1 0 -36"/>
+          <path class="ln2" d="M120 10 a4 4 0 1 1 0 8 a4 4 0 1 1 0 -8"/>
+          <text x="112" y="220">m</text>
+        </g>
+      </g>
+      <text x="132" y="120">ℓ</text>
+      <text x="6" y="296">tige rigide</text>
+    </svg>
+
+    <!-- Cercle trigo -->
+    <svg class="sk w" data-sk style="right:4%;bottom:3%;width:min(15vw,220px)" viewBox="0 0 300 300" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 150 L280 150 M270 144 L280 150 L270 156 M150 280 L150 20 M144 30 L150 20 L156 30"/>
+        <path class="ln" d="M250 150 A100 100 0 1 1 50 150 A100 100 0 1 1 250 150"/>
+        <path class="ln" d="M150 150 L226.6 85.7"/>
+        <path class="dash" d="M226.6 85.7 L226.6 150 M226.6 85.7 L150 85.7 M150 150 L79.3 79.3 M150 150 L63.4 100"/>
+        <path class="ln2" d="M182 150 A32 32 0 0 0 174.5 129.4"/>
+        <path class="ln2" d="M226.6 146 L226.6 154 M146 85.7 L154 85.7"/>
+      </g>
+      <text x="188" y="142">θ</text>
+      <text x="200" y="174">cos θ</text>
+      <text x="96" y="80">sin θ</text>
+      <text x="254" y="172">1</text><text x="156" y="42">π/2</text><text x="24" y="142">π</text>
+      <text x="40" y="74">3π/4</text>
+    </svg>
+
+    <!-- Plan incliné -->
+    <svg class="sk w" data-sk style="left:4%;bottom:4%;width:min(18vw,250px)" viewBox="0 0 340 220" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 200 L320 200 L320 60 Z"/>
+        <path class="ln" d="M150 139.3 L195.3 118.2 L180.1 85.6 L134.8 106.7 Z"/>
+        <path class="ln" d="M165 112 L165 176 M159 166 L165 176 L171 166"/>
+        <path class="ln" d="M165 112 L141.7 62.2 M139 74 L141.7 62.2 L150 70"/>
+        <path class="ln2" d="M72 200 A52 52 0 0 0 67 178"/>
+      </g>
+      <text x="172" y="182">P</text><text x="124" y="62">R</text><text x="80" y="194">α</text>
+    </svg>
+
+    <div class="hero-in" data-enter>
+      <h1>Le pull de promo<span class="l2">prépa.</span></h1>
+      <p class="classes">PTSI <i></i> PCSI <i></i> PSI <i></i> <span>PSI<span class="star" aria-label="étoile"><svg viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0 Z"/></svg></span></span> <i></i> PT <i></i> <span>PT<span class="star d2" aria-label="étoile"><svg viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0 Z"/></svg></span></span></p>
+      <p class="sub">Deux promos, deux pulls. Survole le tien, clique, et réserve-le en un message.</p>
+      <p class="meta"><span><b>40 €</b> le pull</span><span>Tailles <b>XS à XXL</b></span><span>Promo <b>232</b> · <b>233</b></span></p>
+    </div>
+    <a class="cue" href="#pulls">Découvrir<i></i></a>
+  </section>
+
+  <!-- PULLS -->
+  <section class="pulls-sec" id="pulls">
+    <h2>Choisis ta promo.<span>Clique sur ton pull pour le réserver.</span></h2>
+
+    <!-- Circuit RLC derrière la 232 -->
+    <svg class="sk g" data-sk style="left:4%;bottom:8%;width:min(26vw,360px);opacity:.18" viewBox="0 0 420 260" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M40 108 L40 40 L120 40 M200 40 L240 40 M320 40 L380 40 L380 125 M380 135 L380 220 L40 220 L40 152"/>
+        <path class="ln" d="M120 40 L130 28 L145 52 L160 28 L175 52 L190 28 L200 40"/>
+        <path class="ln" d="M240 40 a10 10 0 0 1 20 0 a10 10 0 0 1 20 0 a10 10 0 0 1 20 0 a10 10 0 0 1 20 0"/>
+        <path class="ln" d="M356 125 L404 125 M356 135 L404 135"/>
+        <path class="ln" d="M40 108 a22 22 0 1 1 0 44 a22 22 0 1 1 0 -44"/>
+        <path class="ln2" d="M28 130 q6 -10 12 0 t12 0"/>
+        <path class="ln2" d="M190 220 L216 220 M208 213 L216 220 L208 227"/>
+      </g>
+      <text x="152" y="22">R</text><text x="270" y="22">L</text><text x="412" y="136">C</text>
+      <text x="74" y="136">e(t)</text><text x="196" y="250">i</text>
+    </svg>
+
+    <!-- Lignes de champ derrière la 233 -->
+    <svg class="sk b" data-sk style="right:3%;bottom:10%;width:min(28vw,380px);opacity:.18" viewBox="0 0 380 260" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M120 116 a14 14 0 1 1 0 28 a14 14 0 1 1 0 -28 M260 116 a14 14 0 1 1 0 28 a14 14 0 1 1 0 -28"/>
+        <path class="ln2" d="M113 130 L127 130 M120 123 L120 137 M253 130 L267 130"/>
+        <path class="ln" d="M136 130 L244 130 M132 120 C170 80 210 80 248 120 M132 140 C170 180 210 180 248 140 M128 112 C160 30 220 30 252 112 M128 148 C160 230 220 230 252 148"/>
+        <path class="ln2" d="M104 130 L24 130 M110 118 C70 90 40 70 20 64 M110 142 C70 170 40 190 20 196 M276 130 L356 130 M270 118 C310 90 340 70 360 64 M270 142 C310 170 340 190 360 196"/>
+        <path class="ln2" d="M186 124 L196 130 L186 136"/>
+      </g>
+      <text x="130" y="250">lignes de champ</text>
+    </svg>
+
+    <!-- L'igloo : conduction dans une demi-coquille -->
+    <svg class="sk w" data-sk style="left:calc(50% - 190px);top:24%;width:380px;opacity:.13" viewBox="0 0 380 250" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M10 200 L370 200"/>
+        <path class="ln2" d="M30 200 L20 212 M60 200 L50 212 M90 200 L80 212 M290 200 L280 212 M320 200 L310 212 M350 200 L340 212"/>
+        <path class="ln" d="M50 200 A140 140 0 0 1 330 200"/>
+        <path class="ln" d="M90 200 A100 100 0 0 1 290 200"/>
+        <path class="ln2" d="M70 150 L106 150 M58 120 L120 120 M84 92 L140 108 M126 70 L160 96 M190 60 L190 100 M254 70 L220 96 M296 92 L240 108 M322 120 L260 120 M310 150 L274 150"/>
+        <path class="ln" d="M172 200 L172 176 A18 18 0 0 1 208 176 L208 200"/>
+        <path class="ln" d="M190 98 L190 30 M184 40 L190 30 L196 40 M118 138 L64 96 M70 108 L64 96 L76 98 M262 138 L316 96 M304 98 L316 96 L310 108"/>
+        <path class="dash" d="M190 200 L120 129 M190 200 L76 101"/>
+      </g>
+      <text x="198" y="40">Φ</text>
+      <text x="150" y="160">T₁</text><text x="336" y="72">T₂</text>
+      <text x="112" y="176">R₁</text><text x="52" y="132">R₂</text>
+      <text x="40" y="240">Φ = 2πλ(T₁ − T₂) / (1/R₁ − 1/R₂)</text>
+    </svg>
+
+    <div class="stage">
+      <button class="pull p232" type="button" data-promo="232" aria-haspopup="dialog" aria-label="Réserver le pull de la promo 232, 40 euros">
+        <span class="beam"></span><span class="glow"></span><span class="floor"></span><span class="shadow"></span>
+        <span class="pull-id"><small>Promo</small><strong>232</strong></span>
+        <span class="fig"><svg viewBox="0 0 400 440" aria-hidden="true"><use href="#hoodie-232"/></svg></span>
+        <span class="pull-foot">
+          <span class="price">40 €<small>XS → XXL</small></span>
+          <span class="cta">Réserver le 232
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </span>
+      </button>
+
+      <button class="pull p233" type="button" data-promo="233" aria-haspopup="dialog" aria-label="Réserver le pull de la promo 233, 40 euros">
+        <span class="beam"></span><span class="glow"></span><span class="floor"></span><span class="shadow"></span>
+        <span class="pull-id"><small>Promo</small><strong>233</strong></span>
+        <span class="fig"><svg viewBox="0 0 400 440" aria-hidden="true"><use href="#hoodie-233"/></svg></span>
+        <span class="pull-foot">
+          <span class="price">40 €<small>XS → XXL</small></span>
+          <span class="cta">Réserver le 233
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- RÉSERVER -->
+  <section class="howto" id="reserver">
+    <!-- Pendule -->
+    <svg class="sk" data-sk style="right:4%;top:6%;width:min(22vw,280px)" viewBox="0 0 260 310" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M50 30 L210 30"/>
+        <path class="ln2" d="M62 30 L52 18 M82 30 L72 18 M102 30 L92 18 M122 30 L112 18 M142 30 L132 18 M162 30 L152 18 M182 30 L172 18 M202 30 L192 18"/>
+        <path class="ln" d="M130 30 L188 226"/>
+        <path class="ln" d="M190 224 a17 17 0 1 1 0 34 a17 17 0 1 1 0 -34"/>
+        <path class="dash" d="M130 30 L130 270 M64 236 Q130 290 196 236"/>
+        <path class="ln2" d="M130 86 Q140 88 147 84"/>
+      </g>
+      <text x="140" y="112">θ</text><text x="168" y="140">ℓ</text><text x="216" y="248">m</text>
+      <text x="14" y="300">θ̈ + (g/ℓ) sin θ = 0</text>
+    </svg>
+    <!-- Lentille -->
+    <svg class="sk g" data-sk style="left:-3%;bottom:4%;width:min(34vw,460px)" viewBox="0 0 460 240" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M20 120 L440 120"/>
+        <path class="ln" d="M230 30 Q258 120 230 210 Q202 120 230 30 Z"/>
+        <path class="ln2" d="M40 70 L230 70 L360 120 L440 151 M40 170 L230 170 L360 120 L440 89"/>
+        <path class="ln" d="M360 112 L360 128"/>
+      </g>
+      <text x="352" y="104">F'</text>
+      <text x="40" y="226">1/f' = 1/OA' − 1/OA</text>
+    </svg>
+
+    <!-- Diagramme de Bode -->
+    <svg class="sk w" data-sk style="right:6%;bottom:4%;width:min(26vw,340px)" viewBox="0 0 360 230" aria-hidden="true">
+      <g filter="url(#rough)">
+        <path class="ln" d="M40 210 L40 20 M34 30 L40 20 L46 30 M40 200 L340 200 M330 194 L340 200 L330 206"/>
+        <path class="ln" d="M40 70 L160 70 Q190 72 205 92 L330 178"/>
+        <path class="dash" d="M180 70 L330 168 M180 70 L180 200"/>
+      </g>
+      <text x="10" y="18">G_dB</text><text x="290" y="224">log ω</text>
+      <text x="172" y="222">ω₀</text><text x="240" y="118">−20 dB/déc</text>
+    </svg>
+
+    <div class="wrap howto-grid">
+      <div>
+        <h2>Réserve ton pull en <em>un message.</em></h2>
+        <p class="intro-p">Pas de site de paiement : un mail suffit. On te recontacte pour confirmer.</p>
+      </div>
+      <div>
+        <ol class="steps">
+          <li><div><h3>Choisis ta promo, ta classe et ta taille.</h3><p>232 ou 233, PTSI, PCSI, PSI, PSI*, PT ou PT*, de XS à XXL. Ta classe est brodée sur le cœur, et tu peux ajouter ton surnom au dos.</p></div></li>
+          <li><div><h3>Envoie un mail.</h3><p>Donne ta promo, ta classe, ta taille, et ton Insta ou ton numéro.</p></div></li>
+          <li><div><h3>Attends la confirmation.</h3><p>On te répond pour valider la commande et le paiement.</p></div></li>
+        </ol>
+        <div class="contacts">
+          <a class="contact" href="mailto:alexismasse5@gmail.com?subject=R%C3%A9servation%20pull%20pr%C3%A9pa"><span>Mail</span><strong>alexismasse5@gmail.com</strong></a>
+          <a class="contact" href="https://www.instagram.com/alexismasse5/" target="_blank" rel="noopener"><span>Insta</span><strong>@alexismasse5</strong></a>
+        </div>
+        <p class="insta-note">Ajoute-moi sur Insta pour toute question et pour suivre l'avancement des pulls.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Lycée Baggio · Prépa</span>
+    <span>Classe brodée en gothique · ronce &amp; rose au dos</span>
+  </div>
+</footer>
+
+<!-- Modale de réservation -->
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-head">
+    <p>Réservation · 40 €</p>
+    <h2 id="dlgTitle">Promo <b>232</b></h2>
+    <button class="x" type="button" id="dlgClose" aria-label="Fermer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="dlg-prev" aria-label="Aperçu de ton pull"><div id="dlgPrev"></div><p><span>Devant</span><span>Dos</span></p></div>
+  <form class="res" id="resForm" novalidate>
+    <fieldset>
+      <legend>Ta classe</legend>
+      <div class="sizes" id="classes"></div>
+      <p class="err" id="errCls"></p>
+    </fieldset>
+    <fieldset>
+      <legend>Ta taille</legend>
+      <div class="sizes" id="sizes"></div>
+      <p class="err" id="errSize"></p>
+    </fieldset>
+    <div class="field">
+      <label class="lbl" for="fNick">Surnom au dos <span class="opt">(facultatif)</span></label>
+      <input id="fNick" maxlength="20" autocomplete="off" spellcheck="false" placeholder="Ex : Le Boss">
+      <small><span id="nickCount">0</span>/20 caractères · il s'écrit en direct sur le dos, au-dessus de l'épée.</small>
+    </div>
+    <div class="field">
+      <label class="lbl" for="fName">Prénom et nom</label>
+      <input id="fName" autocomplete="name" required>
+      <p class="err" id="errName"></p>
+    </div>
+    <div class="field">
+      <label class="lbl" for="fContact">Ton Insta ou ton numéro</label>
+      <input id="fContact" placeholder="@ton.insta ou 06 …" required>
+      <small>Pour qu'on puisse te recontacter.</small>
+      <p class="err" id="errContact"></p>
+    </div>
+    <div class="send">
+      <button type="submit" class="mail" value="mail">Envoyer par mail</button>
+    </div>
+    <p class="direct">Le bouton ouvre ton appli mail avec le message déjà écrit. Sinon, écris directement à
+      <a href="mailto:alexismasse5@gmail.com">alexismasse5@gmail.com</a>. Une question ? Ajoute-moi sur Insta :
+      <a href="https://www.instagram.com/alexismasse5/" target="_blank" rel="noopener">@alexismasse5</a>.</p>
+  </form>
+</dialog>
+
+<!-- Pulls (silhouette en attendant le design final) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="hd-body" d="M150 70 C150 40 175 22 200 22 C225 22 250 40 250 70 L300 92 C330 104 348 120 356 150 L382 350 C384 364 376 372 362 374 L336 376 C324 377 316 370 314 358 L298 214 L298 400 C298 410 292 416 282 416 L118 416 C108 416 102 410 102 400 L102 214 L86 358 C84 370 76 377 64 376 L38 374 C24 372 16 364 18 350 L44 150 C52 120 70 104 100 92 Z"/>
+    <g id="hd-detail">
+      <path fill="#050506" d="M163 74 C166 50 234 50 237 74 C230 104 170 104 163 74 Z"/>
+      <path fill="none" stroke="rgba(255,255,255,.05)" stroke-width="3" d="M100 92 C120 140 140 100 163 74 M300 92 C280 140 260 100 237 74 M102 214 L110 150 M298 214 L290 150 M150 200 C170 260 160 300 170 330 M250 200 C232 250 244 300 232 330"/>
+      <path fill="rgba(0,0,0,.35)" stroke="rgba(255,255,255,.06)" stroke-width="2" d="M136 312 L264 312 L282 378 L118 378 Z"/>
+      <rect x="102" y="396" width="196" height="20" rx="6" fill="rgba(0,0,0,.4)"/>
+      <path stroke="rgba(0,0,0,.45)" stroke-width="12" stroke-linecap="round" d="M28 362 L74 365 M326 365 L372 362"/>
+    </g>
+    <radialGradient id="fab232" cx="50%" cy="8%" r="95%"><stop offset="0" stop-color="#3a3326"/><stop offset=".45" stop-color="#17150f"/><stop offset="1" stop-color="#070707"/></radialGradient>
+    <radialGradient id="fab233" cx="50%" cy="8%" r="95%"><stop offset="0" stop-color="#26303f"/><stop offset=".45" stop-color="#10141b"/><stop offset="1" stop-color="#070707"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe8b8"/><stop offset=".5" stop-color="#d9b56f"/><stop offset="1" stop-color="#8f6b2e"/></linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6f0ff"/><stop offset=".5" stop-color="#8fb8ff"/><stop offset="1" stop-color="#3d68c4"/></linearGradient>
+    <filter id="emb" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+    <g id="hoodie-232">
+      <use href="#hd-body" fill="url(#fab232)" stroke="rgba(217,181,111,.35)" stroke-width="1.5"/>
+      <use href="#hd-detail"/>
+      <g stroke="url(#gold)" stroke-width="3" stroke-linecap="round" fill="none"><path d="M184 96 C182 120 180 140 178 162"/><path d="M216 96 C218 120 220 140 222 162"/></g>
+      <circle cx="178" cy="166" r="5" fill="url(#gold)"/><circle cx="222" cy="166" r="5" fill="url(#gold)"/>
+      <g filter="url(#emb)" fill="url(#gold)" text-anchor="middle" font-family="Bodoni Moda, serif">
+        <text x="200" y="262" font-size="66">232</text>
+        <text x="200" y="290" font-size="15" letter-spacing="6">PRÉPA · BAGGIO</text>
+      </g>
+    </g>
+    <g id="hoodie-233">
+      <use href="#hd-body" fill="url(#fab233)" stroke="rgba(143,184,255,.35)" stroke-width="1.5"/>
+      <use href="#hd-detail"/>
+      <g stroke="url(#ice)" stroke-width="3" stroke-linecap="round" fill="none"><path d="M184 96 C182 120 180 140 178 162"/><path d="M216 96 C218 120 220 140 222 162"/></g>
+      <circle cx="178" cy="166" r="5" fill="url(#ice)"/><circle cx="222" cy="166" r="5" fill="url(#ice)"/>
+      <g filter="url(#emb)" fill="url(#ice)" text-anchor="middle" font-family="Bodoni Moda, serif">
+        <text x="200" y="262" font-size="66">233</text>
+        <text x="200" y="290" font-size="15" letter-spacing="6">PRÉPA · BAGGIO</text>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<script>
+(() => {
+  const EMAIL = 'alexismasse5@gmail.com';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Bobine du solénoïde ---------- */
+  const coil = document.getElementById('coil');
+  let c = '';
+  for (let i = 0; i < 13; i++) {
+    const x = 90 + i * 28;
+    c += `<path class="ln" d="M${x} 80 A13 60 0 0 1 ${x} 200"/>`;
+    c += `<path class="dash" d="M${x} 200 A13 60 0 0 1 ${x + 2} 80"/>`;
+  }
+  c += `<path class="ln" d="M90 200 L86 222"/>`;
+  coil.innerHTML = c;
+
+  /* ---------- Tracé des croquis ---------- */
+  document.querySelectorAll('.sk .ln, .sk .ln2').forEach(el => el.setAttribute('pathLength', '1'));
+  const drawAll = () => {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('drawn'); io.unobserve(e.target); }
+    }), { threshold: .2 });
+    document.querySelectorAll('[data-sk]').forEach(s => io.observe(s));
+  };
+
+  /* ---------- Intro : tunnel d'équations ---------- */
+  const EQS = [
+    ['\\nabla\\cdot\\vec E=\\dfrac{\\rho}{\\varepsilon_0}','∇·E = ρ/ε₀'],
+    ['\\vec{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j+\\mu_0\\varepsilon_0\\dfrac{\\partial\\vec E}{\\partial t}','rot B = μ₀j + μ₀ε₀ ∂E/∂t'],
+    ['\\vec{\\mathrm{rot}}\\,\\vec E=-\\dfrac{\\partial\\vec B}{\\partial t}','rot E = −∂B/∂t'],
+    ['\\Delta V+\\dfrac{\\rho}{\\varepsilon_0}=0','ΔV + ρ/ε₀ = 0'],
+    ['\\rho\\left(\\dfrac{\\partial\\vec v}{\\partial t}+(\\vec v\\cdot\\nabla)\\vec v\\right)=-\\nabla P+\\eta\\Delta\\vec v','Navier–Stokes'],
+    ['P+\\tfrac12\\rho v^2+\\rho g z=\\mathrm{cte}','P + ½ρv² + ρgz = cte'],
+    ['\\dfrac{\\partial T}{\\partial t}=D\\,\\Delta T','∂T/∂t = DΔT'],
+    ['\\dfrac{\\partial^2 u}{\\partial t^2}=c^2\\dfrac{\\partial^2 u}{\\partial x^2}','d’Alembert'],
+    ['e^{i\\pi}+1=0','e^{iπ} + 1 = 0'],
+    ['\\displaystyle\\int_{-\\infty}^{+\\infty}e^{-x^2}\\,dx=\\sqrt{\\pi}','∫e^{−x²}dx = √π'],
+    ['\\displaystyle\\sum_{n=1}^{+\\infty}\\frac{1}{n^2}=\\frac{\\pi^2}{6}','∑ 1/n² = π²/6'],
+    ['f(x)=\\displaystyle\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k+o\\big((x-a)^n\\big)','Taylor–Young'],
+    ['|\\langle x,y\\rangle|\\le\\|x\\|\\,\\|y\\|','Cauchy–Schwarz'],
+    ['A=PDP^{-1}','A = PDP⁻¹'],
+    ['\\chi_A(X)=\\det(XI_n-A)','χ_A = det(XI − A)'],
+    ['\\Delta U=W+Q','ΔU = W + Q'],
+    ['dU=T\\,dS-P\\,dV','dU = TdS − PdV'],
+    ['\\Delta S=S_e+S_c,\\; S_c\\ge 0','ΔS = Sₑ + S_c'],
+    ['\\vec j_{th}=-\\lambda\\,\\overrightarrow{\\mathrm{grad}}\\,T','j = −λ grad T'],
+    ['\\underline H(j\\omega)=\\dfrac{H_0}{1+j\\dfrac{\\omega}{\\omega_0}}','H(jω) = H₀/(1 + jω/ω₀)'],
+    ['m\\dfrac{d\\vec v}{dt}=\\sum\\vec F','m dv/dt = ΣF'],
+    ['\\displaystyle\\oint_{\\mathcal C}\\vec B\\cdot d\\vec\\ell=\\mu_0 I_{enl}','∮B·dl = μ₀I'],
+    ['\\displaystyle\\oiint_{\\Sigma}\\vec E\\cdot d\\vec S=\\dfrac{Q_{int}}{\\varepsilon_0}','Gauss'],
+    ['\\underline Z_L=jL\\omega','Z = jLω'],
+    ['\\ddot x+\\dfrac{\\omega_0}{Q}\\dot x+\\omega_0^2x=0','ẍ + (ω₀/Q)ẋ + ω₀²x = 0'],
+    ['\\vec\\Pi=\\dfrac{\\vec E\\wedge\\vec B}{\\mu_0}','Π = E∧B/μ₀'],
+    ['\\eta=1-\\dfrac{T_f}{T_c}','η = 1 − T_f/T_c'],
+    ['y\'+a(x)\\,y=b(x)','y′ + a(x)y = b(x)'],
+    ['\\vec F=q(\\vec E+\\vec v\\wedge\\vec B)','F = q(E + v∧B)'],
+    ['B=\\mu_0\\,n\\,I','B = μ₀nI'],
+    ['\\lim_{n\\to\\infty}\\left(1+\\frac1n\\right)^n=e','(1 + 1/n)ⁿ → e'],
+  ];
+  const intro = document.getElementById('intro');
+  const tunnel = document.getElementById('tunnel');
+  const mark = document.getElementById('introMark');
+  let finished = false;
+
+  function finishIntro(){
+    if (finished) return; finished = true;
+    intro.classList.add('gone');
+    document.body.classList.remove('locked');
+    document.documentElement.classList.add('ready');
+    setTimeout(drawAll, 300);
+    setTimeout(() => intro.remove(), 1200);
+  }
+  if (reduce) { intro.remove(); document.body.classList.remove('locked'); document.documentElement.classList.add('ready'); drawAll(); }
+  else startIntro();
+
+  function startIntro(){
+    const N = innerWidth < 600 ? 26 : 44;
+    const FAR = -4200, NEAR = 650, parts = [];
+    const spread = () => {
+      const a = Math.random() * Math.PI * 2;
+      const r = 120 + Math.random() * Math.max(innerWidth, innerHeight) * 0.75;
+      return [Math.cos(a) * r, Math.sin(a) * r * 0.75];
+    };
+    const render = (el, i) => {
+      const [tex, plain] = EQS[i % EQS.length];
+      if (window.katex) { try { katex.render(tex, el, { throwOnError:false }); return; } catch(e){} }
+      el.textContent = plain; el.style.fontFamily = 'Bodoni Moda, serif';
+    };
+    for (let i = 0; i < N; i++) {
+      const el = document.createElement('div');
+      el.className = 'eq' + (i % 6 === 0 ? ' g' : i % 9 === 0 ? ' b' : '');
+      const [x, y] = spread();
+      parts.push({ el, x, y, z: FAR + (i / N) * (NEAR - FAR) * 0.95, i });
+      tunnel.appendChild(el);
+    }
+    const doRender = () => parts.forEach(p => render(p.el, p.i));
+    doRender(); if (!window.katex) addEventListener('load', doRender, { once:true });
+
+    const t0 = performance.now(); let last = t0;
+    const DURATION = 4800;
+    function frame(now){
+      if (finished) return;
+      const t = now - t0, dt = Math.min(48, now - last) / 1000; last = now;
+      const k = t / DURATION;
+      const speed = 360 + 5400 * Math.pow(k, 3);
+      for (const p of parts) {
+        p.z += speed * dt;
+        if (p.z > NEAR) {
+          if (k < 0.75) { p.z = FAR; [p.x, p.y] = spread(); render(p.el, (p.i += N)); }
+          else { p.el.style.opacity = 0; continue; }
+        }
+        const fade = Math.min(1, (p.z - FAR) / 1400) * Math.min(1, (NEAR - p.z) / 260);
+        p.el.style.opacity = Math.max(0, fade).toFixed(3);
+        p.el.style.transform = `translate3d(${p.x}px,${p.y}px,${p.z}px) translate(-50%,-50%)`;
+      }
+      if (k > 0.6) mark.classList.add('on');
+      if (t >= DURATION) return finishIntro();
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    document.getElementById('skipIntro').addEventListener('click', finishIntro);
+    addEventListener('keydown', e => { if (['Escape','Enter',' '].includes(e.key)) finishIntro(); }, { once:true });
+    addEventListener('wheel', finishIntro, { once:true, passive:true });
+    addEventListener('touchmove', finishIntro, { once:true, passive:true });
+  }
+
+  /* ---------- Pulls : classe brodée en gothique devant, épée « ronce & rose » au dos ---------- */
+  const NS = 'http://www.w3.org/2000/svg';
+  const BASE = '#121213', THREAD = '#efeae0', B = '#141415';
+  const SAT = 2.4, DET = 1.1, DASH = 'stroke-dasharray="4 3"';
+  const CLASSES = ['PTSI','PCSI','PSI','PSI*','PT','PT*'];
+  const f1 = n => n.toFixed(1);
+  const STARP = 'M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0 Z';
+  const starAt = (x, y, s, c) => `<path fill="${c}" transform="translate(${x - 12 * s} ${y - 12 * s}) scale(${s})" d="${STARP}"/>`;
+  const titleCase = s => s[0] + s.slice(1).toLowerCase();
+
+  /* effet fil brodé */
+  const threadFx = u => `
+    <filter id="th-${u}" x="-10%" y="-10%" width="120%" height="125%">
+      <feTurbulence type="fractalNoise" baseFrequency=".09 1.5" numOctaves="1" seed="3" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .78  0 0 0 0 .78  0 0 0 0 .78  .5 0 0 0 .55" result="g"/>
+      <feComposite in="g" in2="SourceGraphic" operator="in" result="gm"/>
+      <feBlend in="SourceGraphic" in2="gm" mode="multiply" result="b"/>
+      <feComposite in="b" in2="SourceGraphic" operator="in" result="t"/>
+      <feDropShadow in="t" dx="0" dy=".7" stdDeviation=".5" flood-color="#000" flood-opacity=".8"/>
+    </filter>`;
+  /* trait « fait main » */
+  const RG = (u, k) => `<filter id="rg-${u}" x="-15%" y="-20%" width="130%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="t"/>
+    <feDisplacementMap in="SourceGraphic" in2="t" scale="${k}" xChannelSelector="R" yChannelSelector="G"/></filter>`;
+
+  /* devant : la classe en lettres gothiques + la promo (boîte 0..100) */
+  function frontArt(cls, promo, c = THREAD){
+    const base = cls.replace('*', ''), st = cls.endsWith('*'), cx = st ? 46 : 50;
+    return `<text x="${cx}" y="60" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="${base.length > 3 ? 34 : 42}" fill="${c}">${titleCase(base)}</text>
+      ${st ? starAt(cx + (base.length > 2 ? 37 : 26), 30, .62, c) : ''}
+      <path d="M26 70 L74 70" stroke="${c}" stroke-width="1"/>
+      <text x="50" y="84" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="600" font-size="8" letter-spacing="4.5" fill="${c}">${promo}</text>`;
+  }
+
+  /* dos : l'épée dans le rocher, la ronce et la rose (boîte 0..200 × -50..166) */
+  const hilt = `
+    <path stroke-width="${SAT}" d="M63 37 C74 44 87 45 100 43 C113 44 126 42 137 34"/>
+    <path stroke-width="${SAT}" d="M70 48 C83 52 93 52 100 51 C109 52 119 51 131 46"/>
+    <path stroke-width="${SAT}" d="M63 37 L56 33 M137 34 L144 29 M70 48 L67 53 M131 46 L135 51"/>
+    <path stroke-width="${SAT}" d="M97 42 L96.6 20 M103 42 L103.4 20 M94.5 20 L105.5 19.5"/>
+    <path stroke-width="${DET}" d="M97 25 L103 29 M97 31 L103 35 M97 37 L103 40"/>
+    <path stroke-width="${SAT}" d="M100 5 C106 7 107 14 101 18 C95 18 93 10 100 5 Z"/>`;
+  const blade = (top, bot) => { const m = (top + bot) / 2; return `
+    <path stroke-width="${SAT}" d="M95 ${top} L94.6 ${m} L95.4 ${bot} M104.8 ${top} L105.3 ${m} L104.4 ${bot}"/>
+    <path stroke-width="${DET}" ${DASH} d="M100 ${top + 5} L99.6 ${m} L100.3 ${bot - 4}"/>`; };
+  const sketch = s => `<g transform="translate(1.4 -1.1) rotate(.8 100 80)" opacity=".75">${s.replace(/stroke-width="[\d.]+"/g, `stroke-width="${DET}"`).replace(/stroke-dasharray="[\d. ]+"/g, '')}</g>`;
+  function reliefRock(u, hw){
+    const L = 100 - hw, R = 100 + hw;
+    const shade = 'M114 145 L140 150 L146 162 L104 162 L94 147 Z M140 150 L156 134 L164 146 L170 162 L146 162 Z';
+    const hatch = Array.from({ length:16 }, (_, i) => `M${92 + i * 5.5} 166 L${112 + i * 5.5} 126`).join(' ');
+    return `
+      <defs><clipPath id="sh-${u}"><path d="${shade}"/></clipPath></defs>
+      <g clip-path="url(#sh-${u})"><path stroke-width="${DET}" d="${hatch}"/></g>
+      <path stroke-width="${SAT}" d="M30 162 L36 150 L46 142 L52 132 L64 126 L78 128 L${L} 127 M${R} 127 L122 121 L134 126 L146 124 L156 134 L164 146 L170 162"/>
+      <path stroke-width="${SAT}" d="M20 162.5 C60 161 140 163.5 180 161.5"/>
+      <path stroke-width="${DET + .4}" d="M64 126 L72 141 L52 132 M72 141 L60 162 M72 141 L94 147 L104 162 M94 147 L${L} 129 M${R} 129 L114 145 L94 147 M114 145 L134 126 M114 145 L140 150 L156 134 M140 150 L146 162 M140 150 L164 146 M46 142 L52 150 L36 150 M52 150 L48 162"/>
+      <path stroke-width="${DET}" ${DASH} d="M40 147 L48 139 L54 131 L63 128.5 M66 130 L71 137 M80 131 L${L - 1} 130"/>
+      <path stroke-width="${DET}" d="M${L - 2} 130 L${L - 7} 135 M${R + 2} 130 L${R + 8} 134 M100 128 L100 133"/>
+      <path stroke-width="${DET + .2}" d="M14 162 L17 156 L23 157 L25 162 M172 162 L175 156.5 L181 157.5 L183 162 M184 162 L186 159 L189 160 L190 162"/>
+      <path stroke-width="${DET}" d="M28 162 L30 155 M8 162 L10 156 M5 162 L4 157 M194 162 L195 155 M198 162 L200 157"/>`;
+  }
+  let _mp;
+  function measure(d){
+    if (!_mp) {
+      const s = document.createElementNS(NS, 'svg');
+      s.setAttribute('style', 'position:absolute;width:0;height:0;visibility:hidden');
+      _mp = document.createElementNS(NS, 'path'); s.appendChild(_mp); document.body.appendChild(s);
+    }
+    _mp.setAttribute('d', d); return _mp;
+  }
+  const thorn = (x, y, tx, ty, side, len = 5) => {
+    const nx = -ty * side, ny = tx * side;
+    return `M${f1(x - tx * 1.8)} ${f1(y - ty * 1.8)} L${f1(x + nx * len + tx * 1.6)} ${f1(y + ny * len + ty * 1.6)} L${f1(x + tx * 1.8)} ${f1(y + ty * 1.8)} `;
+  };
+  function thornsAlong(d, n, start, end){
+    const p = measure(d), L = p.getTotalLength(); let out = '';
+    for (let k = 0; k < n; k++) {
+      const s = L * (start + (end - start) * k / Math.max(1, n - 1));
+      const a = p.getPointAtLength(s), b = p.getPointAtLength(Math.min(L, s + 1));
+      const m = Math.hypot(b.x - a.x, b.y - a.y) || 1;
+      out += thorn(a.x, a.y, (b.x - a.x) / m, (b.y - a.y) / m, k % 2 ? 1 : -1);
+    }
+    return out;
+  }
+  /* ronce enroulée autour de la lame : les passages derrière la lame sont coupés */
+  function spiral({ y0, y1, turns, amp, half = 7, n = 16 }){
+    const N = 260, pts = [];
+    for (let i = 0; i <= N; i++) {
+      const t = i / N, a = t * turns * 2 * Math.PI, x = 100 + amp * Math.sin(a), y = y0 + (y1 - y0) * t;
+      pts.push({ x, y, vis: Math.cos(a) > 0 || Math.abs(x - 100) > half });
+    }
+    let d = '', pen = false;
+    pts.forEach(p => { if (p.vis) { d += `${pen ? 'L' : 'M'}${f1(p.x)} ${f1(p.y)} `; pen = true; } else pen = false; });
+    let th = '';
+    for (let k = 1; k <= n; k++) {
+      const i = Math.round(k * N / (n + 1)), p = pts[i];
+      if (!p.vis || !pts[i - 1].vis || !pts[i + 1].vis) continue;
+      const tx = pts[i + 1].x - pts[i - 1].x, ty = pts[i + 1].y - pts[i - 1].y, m = Math.hypot(tx, ty);
+      th += thorn(p.x, p.y, tx / m, ty / m, k % 2 ? 1 : -1);
+    }
+    return { d, th, end: pts[N] };
+  }
+  const leaf = (x, y, ang, s = 1) => `<path stroke-width="${DET / s}" transform="translate(${f1(x)} ${f1(y)}) rotate(${ang}) scale(${s})" d="M0 0 C4 -5.5 11 -5.5 15 0 C11 5.5 4 5.5 0 0 Z M1.5 0 L12.5 0 M5 0 L7.5 -2.8 M9 0 L11 -2.4"/>`;
+  function rose(x, y, r){
+    const P = (a, rr) => `${f1(x + rr * Math.cos(a))} ${f1(y + rr * Math.sin(a))}`;
+    let outer = '', inner = '';
+    for (let k = 0; k < 5; k++) {
+      const a = k * 2 * Math.PI / 5 - Math.PI / 2, b = a + 2 * Math.PI / 5;
+      outer += `M${P(a, r * .75)} Q${P((a + b) / 2, r * 1.5)} ${P(b, r * .75)} `;
+      const c = a + .63, e = c + 2 * Math.PI / 5;
+      inner += `M${P(c, r * .38)} Q${P((c + e) / 2, r * .9)} ${P(e, r * .38)} `;
+    }
+    return `<path stroke-width="${SAT - .5}" d="${outer}"/>
+      <path stroke-width="${DET}" d="${inner} M${f1(x - 1.6)} ${f1(y)} a1.6 1.6 0 1 1 3.2 0 a3.2 3.2 0 1 1 -6.4 0"/>`;
+  }
+  const vine = (d, th, w = DET + .9) => `<path stroke="${B}" stroke-width="${w + 3}" d="${d}"/><path stroke-width="${w}" d="${d}"/><path stroke-width="${DET}" d="${th}"/>`;
+  let BACK_ART = null;
+  function backArt(u){
+    if (!BACK_ART) {
+      const v = spiral({ y0:127, y1:80, turns:2.25, amp:14, n:13 });
+      const stem = `M${f1(v.end.x)} ${f1(v.end.y)} C${f1(v.end.x + 6)} ${f1(v.end.y - 4)} 122 ${f1(v.end.y - 8)} 124 72`;
+      const sw = hilt + blade(51, 128);
+      BACK_ART = sw + sketch(sw) + vine(v.d, v.th) + vine(stem, thornsAlong(stem, 2, .3, .7)) +
+        rose(125, 64, 10) + leaf(114, 76, 160, .9) + leaf(130, 78, 30, .85) + leaf(86, 104, 200, .9);
+    }
+    return `<defs>${RG(u, 2.4)}</defs><g filter="url(#rg-${u})" fill="none" stroke="${THREAD}" stroke-linecap="round" stroke-linejoin="round">${reliefRock(u, 5.5)}${BACK_ART}</g>`;
+  }
+
+  /* le pull, vu de face et de dos */
+  const BODY = 'M200 120 L140 152 C110 170 95 220 88 300 L74 470 L72 530 L128 534 L130 474 L160 300 L162 560 L160 610 L440 610 L438 560 L440 300 L470 474 L472 534 L528 530 L526 470 L512 300 C505 220 490 170 460 152 L400 120 C405 70 360 38 300 38 C240 38 195 70 200 120 Z';
+  const RIBS = `
+    <path stroke-dasharray="1 5" d="M80 482 L78 524 M92 483 L91 526 M104 484 L103 528 M116 485 L116 530 M520 482 L522 524 M508 483 L509 526 M496 484 L497 528 M484 485 L484 530"/>
+    <path stroke-dasharray="1 6" d="M175 568 L175 604 M195 568 L195 604 M215 568 L215 604 M235 568 L235 604 M255 568 L255 604 M275 568 L275 604 M295 568 L295 604 M315 568 L315 604 M335 568 L335 604 M355 568 L355 604 M375 568 L375 604 M395 568 L395 604 M415 568 L415 604"/>`;
+  const shell = (u, acc, hood) => `
+    <g stroke="rgba(${acc},.28)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+      <path fill="url(#shade-${u})" d="${BODY}"/>
+      <path fill="url(#side-${u})" stroke="none" d="M160 300 L162 610 L440 610 L440 300 Z"/>
+      ${hood}
+    </g>`;
+  const hoodieFront = (u, acc) => shell(u, acc, `<path fill="rgba(0,0,0,.45)" d="M232 118 C236 85 264 70 300 70 C336 70 364 85 368 118 C350 150 325 170 300 178 C275 170 250 150 232 118 Z"/>`) + `
+    <g stroke="rgba(255,255,255,.12)" stroke-width="1.6" stroke-linecap="round" fill="none">
+      <path d="M222 122 C226 80 260 56 300 56 C340 56 374 80 378 122 M140 152 C150 220 158 262 160 300 M460 152 C450 220 442 262 440 300 M74 470 L130 474 M470 474 L526 470 M162 560 L438 560"/>
+      ${RIBS}
+      <path fill="rgba(0,0,0,.08)" d="M206 420 L394 420 C402 460 416 500 430 532 L170 532 C184 500 198 460 206 420 Z"/>
+      <path stroke-dasharray="4 4" d="M212 428 L388 428 M206 420 C198 460 184 500 170 532 M394 420 C402 460 416 500 430 532"/>
+    </g>
+    <circle cx="283" cy="164" r="4" fill="rgba(0,0,0,.4)"/><circle cx="317" cy="164" r="4" fill="rgba(0,0,0,.4)"/>
+    <g stroke="#e9e6df" stroke-width="4" stroke-linecap="round" fill="none"><path d="M283 166 C281 200 279 230 277 262"/><path d="M317 166 C319 200 321 230 323 262"/></g>
+    <rect x="273" y="258" width="8" height="18" rx="2" fill="#b9b4a8"/><rect x="319" y="258" width="8" height="18" rx="2" fill="#b9b4a8"/>`;
+  const hoodieBack = (u, acc) => shell(u, acc, `<path fill="#1c1c1f" d="M226 156 C212 104 246 46 300 42 C354 46 388 104 374 156 C340 170 260 170 226 156 Z"/>`) + `
+    <g stroke="rgba(255,255,255,.12)" stroke-width="1.6" stroke-linecap="round" fill="none">
+      <path d="M300 44 L300 162 M140 152 C150 220 158 262 160 300 M460 152 C450 220 442 262 440 300 M74 470 L130 474 M470 474 L526 470 M162 560 L438 560"/>
+      ${RIBS}
+    </g>`;
+  function pairSVG(promo, u){
+    const acc = promo === '232' ? '217,181,111' : '143,184,255';
+    return `<svg xmlns="${NS}" viewBox="50 30 1020 600" aria-hidden="true">
+      <defs>
+        <linearGradient id="shade-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26262a"/><stop offset=".55" stop-color="${BASE}"/><stop offset="1" stop-color="${BASE}"/></linearGradient>
+        <linearGradient id="side-${u}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".3"/><stop offset=".22" stop-color="#000" stop-opacity="0"/><stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></linearGradient>
+        ${threadFx(u + 'f')}${threadFx(u + 'b')}
+      </defs>
+      <g>${hoodieFront(u, acc)}<g transform="translate(334 204) scale(.6)" filter="url(#th-${u}f)" data-front></g></g>
+      <g transform="translate(520 0)">
+        ${hoodieBack(u, acc)}
+        <text data-nick x="300" y="258" text-anchor="middle" font-family="'Grenze Gotisch', UnifrakturMaguntia, serif" font-weight="600" font-size="34" letter-spacing="1" fill="${THREAD}" filter="url(#th-${u}b)"></text>
+        <g transform="translate(228 282) scale(.72)" filter="url(#th-${u}b)">${backArt(u)}</g>
+      </g>
+    </svg>`;
+  }
+  const setFront = (root, cls, promo) => { const g = root.querySelector('[data-front]'); if (g) g.innerHTML = frontArt(cls, promo); };
+  function setNick(root, nick){
+    const t = root.querySelector('[data-nick]'); if (!t) return;
+    nick = nick.trim().slice(0, 20);
+    t.textContent = nick;
+    t.removeAttribute('textLength'); t.removeAttribute('lengthAdjust');
+    t.setAttribute('font-size', nick.length ? Math.min(34, 470 / nick.length).toFixed(1) : 34);
+    try { if (nick && t.getComputedTextLength() > 236) { t.setAttribute('textLength', 236); t.setAttribute('lengthAdjust', 'spacingAndGlyphs'); } } catch (e) {}
+  }
+
+  /* les deux pulls de la page : le devant passe d'une classe à l'autre */
+  const figs = ['232', '233'].map(p => {
+    const fig = document.querySelector(`.p${p} .fig`);
+    fig.innerHTML = pairSVG(p, 's' + p);
+    return [p, fig];
+  });
+  let ci = 3;
+  const showClass = () => figs.forEach(([p, fig]) => setFront(fig, CLASSES[ci], p));
+  showClass();
+  if (!reduce) setInterval(() => { ci = (ci + 1) % CLASSES.length; showClass(); }, 2400);
+
+  /* ---------- Header au scroll ---------- */
+  const top = document.getElementById('top');
+  addEventListener('scroll', () => top.classList.toggle('scrolled', scrollY > 40), { passive:true });
+
+  /* ---------- Lumière qui suit la souris ---------- */
+  document.querySelectorAll('.pull').forEach(p => p.addEventListener('pointermove', e => {
+    const r = p.getBoundingClientRect();
+    p.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    p.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }));
+
+  /* ---------- Réservation ---------- */
+  const dlg = document.getElementById('dlg');
+  const title = document.getElementById('dlgTitle');
+  const form = document.getElementById('resForm');
+  const sizesBox = document.getElementById('sizes');
+  const fName = document.getElementById('fName'), fContact = document.getElementById('fContact');
+  let promo = '232', opener = null;
+
+  /* Aperçu en direct : la classe change le devant, le surnom s'écrit au dos */
+  const fNick = document.getElementById('fNick'), nickCount = document.getElementById('nickCount'), prev = document.getElementById('dlgPrev');
+  const curCls = () => (form.querySelector('input[name=cls]:checked') || {}).value || 'PSI';
+  function renderPreview(){
+    prev.innerHTML = pairSVG(promo, 'd' + promo);
+    setFront(prev, curCls(), promo);
+    setNick(prev, fNick.value);
+  }
+  document.getElementById('classes').addEventListener('change', () => setFront(prev, curCls(), promo));
+  fNick.addEventListener('input', () => { nickCount.textContent = fNick.value.length; setNick(prev, fNick.value); });
+
+  const STAR = '<span class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 0 C13 8 16 11 24 12 C16 13 13 16 12 24 C11 16 8 13 0 12 C8 11 11 8 12 0 Z"/></svg></span>';
+  ['PTSI','PCSI','PSI','PSI*','PT','PT*'].forEach(s => {
+    const id = 'c' + s.replace('*', 'e');
+    const lbl = s.endsWith('*') ? s.slice(0, -1) + STAR : s;
+    document.getElementById('classes').insertAdjacentHTML('beforeend',
+      `<input type="radio" name="cls" id="${id}" value="${s}"><label for="${id}" aria-label="${s.replace('*', ' étoile')}">${lbl}</label>`);
+  });
+  ['XS','S','M','L','XL','XXL'].forEach(s => sizesBox.insertAdjacentHTML('beforeend',
+    `<input type="radio" name="size" id="s${s}" value="${s}"><label for="s${s}">${s}</label>`));
+
+  document.querySelectorAll('.pull').forEach(btn => btn.addEventListener('click', () => {
+    promo = btn.dataset.promo; opener = btn;
+    title.innerHTML = 'Promo <b>' + promo + '</b>';
+    dlg.className = 'p' + promo;
+    form.querySelectorAll('.err').forEach(e => e.textContent = '');
+    dlg.showModal();
+    renderPreview();
+  }));
+  document.getElementById('dlgClose').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', () => opener && opener.focus());
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const cls = form.querySelector('input[name=cls]:checked');
+    const size = form.querySelector('input[name=size]:checked');
+    const name = fName.value.trim(), contact = fContact.value.trim();
+    const set = (id, msg) => (document.getElementById(id).textContent = msg);
+    set('errCls', cls ? '' : 'Choisis ta classe.');
+    set('errSize', size ? '' : 'Choisis une taille.');
+    set('errName', name ? '' : 'Indique ton prénom et ton nom.');
+    set('errContact', contact ? '' : 'Ajoute ton Insta ou ton numéro.');
+    if (!cls || !size || !name || !contact) {
+      (!cls ? form.querySelector('input[name=cls]') : !size ? form.querySelector('input[name=size]') : !name ? fName : fContact).focus();
+      return;
+    }
+    const msg = `Salut ! Je réserve un pull de promo prépa.\n\nPromo : ${promo}\nClasse : ${cls.value}\nTaille : ${size.value}\nNom : ${name}\nInsta / tél : ${contact}\n\nSurnom au dos : ${fNick.value.trim().slice(0, 20) || 'aucun'}\n\nPrix : 40 €`;
+    location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Réservation pull prépa — promo ' + promo + ' — ' + cls.value + ' — ' + size.value)}&body=${encodeURIComponent(msg)}`;
+  });
+})();
+</script>
+</body>
+</html>
